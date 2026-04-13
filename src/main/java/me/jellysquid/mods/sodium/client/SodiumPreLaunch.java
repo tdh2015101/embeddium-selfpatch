@@ -8,10 +8,10 @@ import net.minecraftforge.fml.loading.FMLLoader;
 
 public class SodiumPreLaunch {
     public static void onPreLaunch() {
-        if(FMLLoader.getDist() == Dist.CLIENT) {
-            GraphicsAdapterProbe.findAdapters();
-            EarlyDriverScanner.scanDrivers();
-            Workarounds.init();
-        }
+        // if(FMLLoader.getDist() == Dist.CLIENT) {
+        //     GraphicsAdapterProbe.findAdapters();
+        //     EarlyDriverScanner.scanDrivers();
+        //     Workarounds.init();
+        // }
     }
 }
