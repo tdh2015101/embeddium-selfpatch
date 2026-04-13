@@ -28,14 +28,14 @@ public class GraphicsAdapterProbe {
 
         // We rely on separate detection logic for Linux because Oshi fails to find GPUs without
         // display outputs, and we can also retrieve the driver version for NVIDIA GPUs this way.
-        var results = OSInfo.getOS() == OSInfo.OS.LINUX
-                ? findAdaptersLinux()
-                : findAdaptersCrossPlatform();
+        // var results = OSInfo.getOS() == OSInfo.OS.LINUX
+        //         ? findAdaptersLinux()
+        //         : findAdaptersCrossPlatform();
 
-        if (results.isEmpty()) {
-            LOGGER.warn("No graphics cards were found. Either you have no hardware devices supporting 3D acceleration, or " +
-                    "something has gone terribly wrong!");
-        }
+        // if (results.isEmpty()) {
+        //     LOGGER.warn("No graphics cards were found. Either you have no hardware devices supporting 3D acceleration, or " +
+        //             "something has gone terribly wrong!");
+        // }
 
         ADAPTERS = results;
     }
